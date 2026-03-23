@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: financial-transactions-monitoring
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ftm_db
+    username: ftm_user
+    password: ftm_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
